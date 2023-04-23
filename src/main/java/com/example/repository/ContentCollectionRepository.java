@@ -27,6 +27,19 @@ public class ContentCollectionRepository {
     public Optional<Content> findById(Integer id) {
         return contents.stream().filter(content -> content.id().equals(id)).findFirst();
     }
+    
+    public void save(Content content) {
+    	contents.removeIf(c -> c.id().equals(content.id()));
+    	contents.add(content);
+    }
+    
+    public boolean existById(Integer id) {
+    	return contents.stream().filter(c -> c.id().equals(id)).count() == 1;
+    }
+
+    public void delete(Integer id) {
+        contents.removeIf(c -> c.id().equals(id));
+    }
 
     @PostConstruct
     public void init() {
