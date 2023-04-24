@@ -40,4 +40,4 @@ jobs:
           tags: ${{ secrets.DOCKERHUB_USERNAME }}/content-calendar:latest
           cache-from: type=gha
           cache-to: type=gha,mode=max
-          platforms: linux/amd64,linux/arm64,linux/arm/v7
+          platforms: linux/amd64,linux/arm64
