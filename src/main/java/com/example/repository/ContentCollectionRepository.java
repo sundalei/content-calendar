@@ -33,7 +33,7 @@ public class ContentCollectionRepository {
     	contents.add(content);
     }
     
-    public boolean existById(Integer id) {
+    public boolean existsById(Integer id) {
     	return contents.stream().filter(c -> c.id().equals(id)).count() == 1;
     }
 
