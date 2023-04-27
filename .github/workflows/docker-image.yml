@@ -27,7 +27,7 @@ jobs:
 
     steps:
       - name: Connect to PostgreSQL
-        runs: echo "hello world"
+        run: echo "hello world"
         env:
           POSTGRES_HOST: localhost
           POSTGRES_PORT: 5432
