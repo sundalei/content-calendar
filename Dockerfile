@@ -12,7 +12,7 @@ RUN ["./mvnw", "test"]
 
 FROM base as development
 VOLUME [ "/app" ]
-CMD ["./mvnw", "spring-boot:run", "-Dspring-boot.run.profiles=mysql", "-Dspring-boot.run.jvmArguments='-agentlib:jdwp=transport=dt_socket,server=y,suspend=n,address=*:8000'"]
+CMD ["./mvnw", "spring-boot:run", "-Dspring-boot.run.jvmArguments='-agentlib:jdwp=transport=dt_socket,server=y,suspend=n,address=*:8000'"]
 
 FROM base as build
 RUN ./mvnw package
