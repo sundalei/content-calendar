@@ -4,6 +4,8 @@ on:
   push:
     branches:
       - integration-test
+      - main
+  pull_request:
 
 jobs:
   test-host:
@@ -34,4 +36,4 @@ jobs:
         
       -
         name: Build and Test
-        run: ./mvnw clean test
+        run: ./mvnw clean test -Ppostgres
