@@ -36,4 +36,4 @@ jobs:
         
       -
         name: Build and Test
-        run: ./mvnw clean test -Ppostgres
+        run: ./mvnw clean && ./mvnw test -P postgres
