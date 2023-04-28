@@ -36,4 +36,4 @@ jobs:
         
       -
         name: Build and Test
-        run: ./mvnw clean && ./mvnw test -P postgres
+        run: ./mvnw clean && ./mvnw test -Dspring.profiles.active=postgres
