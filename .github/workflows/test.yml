@@ -1,0 +1,13 @@
+name: test database
+
+on:
+  push:
+    branches:
+      - integration-test
+
+jobs:
+  test-host:
+    runs-on: ubuntu-latest
+    steps:
+      - name: echo message
+        run: echo hello
