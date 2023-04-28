@@ -1,4 +1,4 @@
-CREATE TABLE Content (
+CREATE TABLE IF NOT EXISTS Content (
     id SERIAL PRIMARY KEY ,
     title varchar(255) NOT NULL,
     description text,
